@@ -1,0 +1,174 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Дурак онлайн</title>
+<style>
+:root{--w:clamp(46px,13vw,76px);--bg:#0a1a2b;--gl:rgba(255,255,255,.07);--bd:rgba(255,255,255,.12);--gold:#f4c24d;--mu:#9fb4c9}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.4 Inter,"Segoe UI",system-ui,sans-serif;color:#eef4fb;min-height:100dvh;background:radial-gradient(60% 50% at 15% 0,#1f4f7c66,transparent),radial-gradient(50% 50% at 95% 100%,#2a6f8f40,transparent),var(--bg)}
+#a{max-width:1040px;margin:auto;padding:12px;min-height:100dvh;display:flex;flex-direction:column;gap:14px}
+header,.box,.tb,.pl{background:var(--gl);border:1px solid var(--bd);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:16px}
+header{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 14px}
+header button{margin-left:auto}.brand{font-size:18px;letter-spacing:-.01em}.sp{flex:1}
+.logo{display:flex;gap:3px;font-size:30px;line-height:1;justify-content:center}.logo.sm{font-size:20px}.rd{color:#ff6b72}
+.auth{max-width:380px;text-align:center;padding:30px 24px;margin:auto}.auth h1{margin:6px 0 0;font-size:30px;letter-spacing:-.02em}
+.mu{color:var(--mu);margin:0;font-size:14px}.er{color:#ffb4a8;min-height:1.4em;margin:0}
+.box{padding:18px;display:flex;flex-direction:column;gap:12px;max-width:440px;margin:auto;width:100%}
+h2{margin:0 0 4px;font-size:18px}
+input,button{font:inherit;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:#ffffff0f;color:inherit;outline:0}
+input:focus{border-color:var(--gold)}
+button{background:linear-gradient(#ffd467,#eeb232);color:#2a1e00;font-weight:700;border:0;cursor:pointer;transition:transform .1s,filter .15s}
+button:hover{filter:brightness(1.07)}button:active{transform:scale(.97)}
+.ghost{background:#ffffff12;color:inherit;border:1px solid var(--bd);font-weight:600}.bad{background:linear-gradient(#ff7a7a,#e5484d);color:#fff}
+.ch2{background:#ffffff12;border:1px solid var(--bd);border-radius:99px;padding:4px 12px;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.coin{width:.95em;height:.95em;border-radius:50%;display:inline-block;background:radial-gradient(circle at 35% 30%,#ffe9a0,#e0a526);box-shadow:inset 0 0 0 2px #b9801a}
+.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#5aa0ff,#7c5cff);display:grid;place-items:center;font-style:normal;font-weight:700;flex:none}
+.me{display:flex;align-items:center;gap:10px}.me small{display:block;color:var(--mu);font-size:12px}
+.lob{display:grid;grid-template-columns:1fr 340px;gap:14px;align-items:start}
+@media(max-width:760px){.lob{grid-template-columns:1fr}}
+.lob section{display:flex;flex-direction:column;gap:10px}#rl{display:flex;flex-direction:column;gap:10px}
+.tb{display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer;transition:transform .15s,border-color .15s}
+.tb:hover{transform:translateY(-2px);border-color:#f4c24d99}
+.tn{flex:1;min-width:0}.tn b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tags em{font-style:normal;font-size:12px;color:var(--mu);background:#ffffff0d;border-radius:6px;padding:2px 8px}
+.bet{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--gold)}
+.seats{display:flex;gap:4px}.seats i{width:9px;height:9px;border-radius:50%;background:#ffffff26}.seats i.on{background:var(--gold)}
+.f,.box>label{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.qb{display:flex;gap:6px}.qb button{flex:1;padding:8px}
+.seg{display:flex;background:#0003;border-radius:12px;padding:3px}.seg label{cursor:pointer}.seg input{display:none}
+.seg span{display:block;padding:7px 12px;border-radius:9px;color:var(--mu);font-weight:600}.seg input:checked+span{background:var(--gold);color:#2a1e00}
+.sw input{appearance:none;-webkit-appearance:none;width:44px;height:26px;padding:0;border:0;border-radius:99px;background:#ffffff26;position:relative;cursor:pointer;transition:.2s}
+.sw input::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s}
+.sw input:checked{background:var(--gold)}.sw input:checked::after{left:21px}
+.join{display:flex;gap:8px;border-top:1px solid var(--bd);padding-top:12px}.join input{flex:1;min-width:0;text-transform:uppercase}
+.slots{display:grid;gap:8px}.slot{display:flex;align-items:center;gap:10px;padding:10px;border-radius:12px;background:#ffffff0d}
+.slot.e{border:1px dashed var(--bd);background:0;color:var(--mu);padding:14px}
+.top{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.pl{padding:8px 16px;text-align:center}.pl small{display:block;color:var(--mu)}
+.at{outline:2px solid var(--gold)}.df{outline:2px solid #6aa9ff}
+.mid{flex:1;display:flex;align-items:center;gap:12px;padding:18px;min-height:240px;border-radius:26px;border:1px solid var(--bd);background:radial-gradient(#2b5d88,#183a5a)}
+.tbl{flex:1;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.pr{position:relative;width:var(--w);height:calc(var(--w)*1.4);cursor:pointer}
+.c{width:var(--w);height:calc(var(--w)*1.4);background:linear-gradient(#fff,#e8edf4);color:#111;border-radius:9px;font-weight:700;padding:3px 6px;font-size:calc(var(--w)*.3);box-shadow:0 4px 10px #0007;display:inline-block;user-select:none}
+.c i{display:block;font-style:normal;font-size:calc(var(--w)*.5)}.r{color:#d11}.dd{position:absolute;left:14px;top:14px}
+.inf{text-align:center;font-size:12px;color:var(--mu)}
+.hand{display:flex;justify-content:center;flex-wrap:wrap;padding:14px 0 env(safe-area-inset-bottom)}
+.hand .c{margin:0 -5px;cursor:pointer;transition:transform .12s}.sel{transform:translateY(-16px)}
+.btns{display:flex;gap:8px;justify-content:center;min-height:44px}.st{text-align:center;color:var(--gold)}
+
+#bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+#bg i{position:absolute;left:var(--x);top:var(--y);width:92px;height:128px;border:1.5px solid #ffffff1f;border-radius:14px;display:grid;place-items:center;font:normal 38px/1 Georgia,serif;color:#ffffff1f;transform:rotate(var(--r));animation:fl 16s ease-in-out infinite alternate}
+#bg i:nth-child(even){animation-duration:21s;animation-delay:-6s}
+@keyframes fl{to{transform:translateY(-26px) rotate(calc(var(--r) + 7deg))}}
+#a{position:relative;z-index:1}
+@keyframes up{from{opacity:0;transform:translateY(12px)}}
+#a.in>*{animation:up .45s cubic-bezier(.2,.8,.2,1) backwards}#a.in>:nth-child(2){animation-delay:.07s}#a.in>:nth-child(3){animation-delay:.14s}
+.new{animation:deal .45s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes deal{from{opacity:0;transform:translate(-90px,-110px) rotate(-16deg) scale(.7)}}
+.nav button{margin-left:0}.me{cursor:pointer}
+.gem{width:.9em;height:1em;display:inline-block;background:linear-gradient(135deg,#9ff3ff,#3aa4ff);clip-path:polygon(50% 0,100% 35%,50% 100%,0 35%)}
+.gb{cursor:pointer}.gb u{text-decoration:none;color:var(--gold);margin-left:4px;font-weight:700}
+.pf{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;align-items:start}.pf .box{max-width:none;margin:0}
+.avs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.avs button{padding:4px;border-radius:50%;background:0;border:0}.avs button.on{outline:2px solid var(--gold)}.avs .av{width:100%;height:auto;aspect-ratio:1}
+.inv{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.it{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px;border-radius:14px;border:1px solid var(--bd);background:#ffffff0d;cursor:pointer}.it.on{border-color:var(--gold)}.it .c{--w:38px}.it button{width:100%;padding:8px}.it small{color:var(--mu)}
+
+.packs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pk{cursor:pointer}.pk input{display:none}
+.pk span{display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px;border-radius:14px;border:1px solid var(--bd);background:#ffffff0d}.pk input:checked+span{border-color:var(--gold);background:#f4c24d1f}
+#ts{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:#0d1b2bf2;border:1px solid var(--bd);padding:10px 18px;border-radius:99px;transition:.3s;z-index:9;pointer-events:none}#ts.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.lg{display:flex;align-items:center;gap:9px;cursor:pointer;margin-right:6px}.lg svg{width:38px;height:38px}
+.lg b{display:flex;flex-direction:column;font-size:18px;font-weight:800;letter-spacing:-.02em;line-height:1.05}.lg b span{font-size:13px;font-weight:500;color:var(--gold)}
+.logo svg{width:68px;height:68px}img.av{object-fit:cover;display:block}
+.ups{display:flex;gap:8px}.ups button{flex:1;padding:10px}
+@media(max-width:420px){.lg b{display:none}}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;padding:0;border:0;border-radius:99px;background:linear-gradient(90deg,var(--gold) var(--p,0%),#ffffff26 var(--p,0%));cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:3px solid var(--gold);box-shadow:0 2px 8px #0008;transition:transform .15s}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid var(--gold)}
+input[type=range]:hover::-webkit-slider-thumb{transform:scale(1.12)}input[type=range]:active::-webkit-slider-thumb{transform:scale(1.25)}
+.bi{display:flex;align-items:center;gap:8px}.bi input{width:110px;text-align:right}.qb .on{background:var(--gold);color:#2a1e00;transform:translateY(-1px)}
+.shk{animation:shk .4s;border-color:#ff7a7a!important}@keyframes shk{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+#ce{min-height:0;margin:-4px 0 0}button:disabled{opacity:.55;cursor:default;filter:none}.pv{display:flex;gap:4px}
+.c{background:var(--cb,linear-gradient(#fff,#e8edf4));color:var(--cf,#111);box-shadow:0 4px 10px #0007,var(--cg,0 0 #0000)}.c.r{color:var(--cr,#d11)}
+#a[data-sk=retro],.k-retro{--cb:linear-gradient(#f3e6c8,#e2cfa3);--cf:#3b2a14;--cr:#a8321f}
+#a[data-sk=night],.k-night{--cb:linear-gradient(#27364b,#162234);--cf:#f4c24d;--cr:#ff8a8a}
+#a[data-sk=neon],.k-neon{--cb:linear-gradient(#150a2e,#0b0620);--cf:#3ff0ff;--cr:#ff4fd8;--cg:0 0 0 1.5px #3ff0ff,0 0 14px #3ff0ff66}
+#a[data-sk=velvet],.k-velvet{--cb:linear-gradient(#5a0f1e,#2a0610);--cf:#f3d9b1;--cr:#ffb3a7}
+#a[data-sk=gold],.k-gold{--cb:linear-gradient(135deg,#fff3c4,#f0c24a 55%,#c8902a);--cf:#3a2800;--cr:#9b1c1c;--cg:0 0 0 1.5px #fff0b0}
+.bonus{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;background:linear-gradient(120deg,#f4c24d26,#ffffff0d);border:1px solid #f4c24d55}
+.bonus .bt{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}.bonus button{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.pb{height:6px;border-radius:99px;background:#ffffff1f;overflow:hidden}.pb i{display:block;height:100%;width:0;background:var(--gold);transition:width 1s linear}
+.rdy{animation:pls 1.8s ease-in-out infinite}@keyframes pls{50%{box-shadow:0 0 0 7px #f4c24d33}}
+@media(max-width:520px){.bonus{flex-wrap:wrap}.bonus button{width:100%;justify-content:center}}
+</style></head><body><div id=bg><i style="--x:5%;--y:14%;--r:-16deg">♠</i><i style="--x:84%;--y:7%;--r:12deg">♥</i><i style="--x:73%;--y:60%;--r:-9deg">♣</i><i style="--x:9%;--y:66%;--r:15deg">♦</i><i style="--x:45%;--y:82%;--r:-5deg">Т</i><i style="--x:48%;--y:-5%;--r:8deg">К</i></div><div id=a></div><div id=ts></div>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+const S=io(),A=document.getElementById('a'),$=i=>document.getElementById(i),SU='♠♥♦♣',RN={11:'В',12:'Д',13:'К',14:'Т'},K=n=>n>=1e3?n/1e3+'K':n;
+let me,st,rooms=[],sel=null,msg='';
+const cd=(c,x='',o='')=>{const k=c.r+'-'+c.s;cur.add(k);return `<div class="c ${c.s==1||c.s==2?'r':''} ${x}${Pv.has(k)?'':' new'}" ${o}>${RN[c.r]||c.r}<i>${SU[c.s]}</i></div>`};
+function auth(r){if(r.err){msg=r.err;draw();return}localStorage.t=r.token;me=r.me;off=r.now-Date.now();msg='';
+ const c=new URLSearchParams(location.search).get('c');if(c){history.replaceState(0,'','/');S.emit('join',{code:c})}draw()}
+S.on('connect',()=>{if(localStorage.t)S.emit('auth',{token:localStorage.t},auth)});
+S.on('me',m=>{me=m;draw()});S.on('rooms',r=>{rooms=r;const e=$('rl');if(e)e.innerHTML=rl()});
+S.on('st',s=>{st=s;if(sel!=null&&sel>=s.hand.length)sel=null;draw()});
+S.on('left',()=>{st=null;sel=null;draw()});S.on('err',m=>{tst(m);const e=$('ce');if(e&&m.startsWith('Лобби'))shake(m)});
+S.on('over',o=>{alert(o.loser?'Дурак: '+o.loser:'Ничья, ставки возвращены');st=null;sel=null;draw()});
+const pg=()=>location.hash.slice(1)||'lobby';
+const draw=()=>{const v=!me?'a':st?(st.play?'g':'w'):pg();A.dataset.sk=me?me.skin:'classic';
+ A.innerHTML=!me?authV():st?gameV():({profile:profV,pay:payV}[v]||lobbyV)();
+ Pv=st?cur:new Set();cur=new Set();if($('br'))bs(100);tick();
+ if(A.dataset.v!=v){A.dataset.v=v;A.classList.add('in');setTimeout(()=>A.classList.remove('in'),700)}};
+addEventListener('hashchange',draw);
+const login=r=>S.emit('auth',{name:$('n').value,pass:$('p').value,reg:r},auth);
+const mk=()=>S.emit('create',{bet:$('bt').value,deck:document.querySelector('[name=dk]:checked').value,max:document.querySelector('[name=mx]:checked').value,tr:$('tr').checked,ch:$('ch').checked,priv:$('pv').checked});
+const mv=(t,c,e)=>{S.emit('mv',{t,c,e});if(t=='tr')sel=null};
+const pk=k=>{if(st.i==st.def)sel=sel==k?null:k;else mv('att',k);draw()};
+const tp=e=>{if(sel!=null&&st.i==st.def){mv('def',sel,e);sel=null}};
+const CO='<i class=coin></i>';
+const authV=()=>`<div class="box auth"><div class=logo>${LG}</div><h1>Дурак онлайн</h1><p class=mu>Играйте с друзьями на монеты</p><input id=n placeholder="Ник" maxlength=16 autocomplete=username><input id=p type=password placeholder="Пароль" autocomplete=current-password><p class=er>${msg}</p><button onclick="login(0)">Войти</button><button class=ghost onclick="login(1)">Создать аккаунт и получить 5000 монет</button></div>`;
+const rl=()=>rooms.map(r=>`<div class=tb onclick="S.emit('join',{id:${r.id}})"><div class=tn><b>${r.name}</b><span class=tags><em>${r.deck} карт</em><em>${r.tr?'переводной':'обычный'}</em><em>${r.ch?'шулер':'без шулера'}</em></span></div><span class=bet>${CO} ${K(r.bet)}</span><span class=seats>${Array.from({length:r.max},(_,k)=>`<i class="${k<r.n?'on':''}"></i>`).join('')}</span></div>`).join('')||'<p class=mu>Свободных столов нет. Создайте свой.</p>';
+const seg=(n,a,d)=>`<div class=seg>${a.map(v=>`<label><input type=radio name=${n} value=${v}${v==d?' checked':''} onchange="bs($('bt').value,'n')"><span>${v}</span></label>`).join('')}</div>`;
+const lobbyV=()=>`${nav()}
+<div class=bonus><div class=bt><b>Бесплатные монеты каждые 2 часа</b><span class=mu id=bm></span><div class=pb><i id=bp></i></div></div><button id=bb onclick="act('bonus')"><i class=coin></i> Получить +1000</button></div>
+<div class=lob><section><h2>Открытые столы</h2><div id=rl>${rl()}</div></section>
+<aside class=box><h2>Новый стол</h2><div class=f>Ставка<span class=bi>${CO}<input id=bt type=number value=100 min=100 max=5000 step=100 oninput="bs(this.value,'n')" onchange="bs(this.value)"></span></div><input id=br type=range min=100 max=5000 step=100 value=100 oninput="bs(this.value)"><div class=qb>${[100,500,1000,5000].map(v=>`<button type=button class=ghost data-v=${v} onclick="bs(${v})">${K(v)}</button>`).join('')}</div><p id=bk class=mu></p>
+<div class=f>Колода${seg('dk',[24,36,52],36)}</div><div class=f>Игроков${seg('mx',[2,3,4,5,6],2)}</div>
+<label class=sw>Переводной<input id=tr type=checkbox checked></label><label class=sw>Шулер<input id=ch type=checkbox></label><label class=sw>Приватный (по коду)<input id=pv type=checkbox></label>
+<button id=mkb onclick=mk()>Создать стол</button><div class=join><input id=cod maxlength=4 placeholder="Код стола" oninput="$('ce').textContent=''" onkeydown="if(event.key=='Enter')jc()"><button class=ghost onclick="jc()">Войти</button></div><p class=er id=ce></p></aside></div>`;
+function gameV(){const g=st,m=g.i,D=g.def==m,T=g.table||[];
+ const head=`<header><span class=ch2>${CO} ${K(g.bet)}</span><span class=ch2>${g.deck} карт</span><span class=ch2>${g.tr?'переводной':'обычный'}</span><span class=ch2>${g.ch?'с шулером':'без шулера'}</span>${g.code?`<span class=ch2>код ${g.code}</span>`:''}<button class=ghost onclick="S.emit('leave')">${g.play?'Сдаться':'Выйти'}</button></header>`;
+ const pl=`<div class=top>${g.ps.map((p,k)=>k==m&&g.play?'':`<div class="pl ${g.play&&k==g.def?'df':g.play&&k==g.att?'at':''}">${p.n}<small>🂠 ${p.c}</small></div>`).join('')}</div>`;
+ if(!g.play)return nav()+`<div class=box><h2>Ждём игроков</h2><div class=tags><em>${CO} ${K(g.bet)}</em><em>${g.deck} карт</em><em>${g.tr?'переводной':'обычный'}</em><em>${g.ch?'с шулером':'без шулера'}</em></div><div class=slots>${Array.from({length:g.max},(_,k)=>g.ps[k]?`<div class=slot>${av(g.ps[k].av,g.ps[k].n,g.ps[k].ai)}${g.ps[k].n}</div>`:'<div class="slot e">Свободно</div>').join('')}</div><div class=join><input id=lk readonly value="${location.origin}/?c=${g.code}"><button class=ghost onclick="navigator.clipboard.writeText($('lk').value);tst('Ссылка скопирована')">Копировать</button></div><p class=mu>Ссылка только для вашего стола. Код: <b>${g.code}</b></p>${g.host==me.name?(g.ps.length>1?'<button onclick="S.emit(\'start\')">Начать игру</button>':'<p class=mu>Для старта нужен ещё хотя бы один игрок</p>'):'<p class=mu>Хозяин стола начнёт игру</p>'}</div>`;
+ const open=T.some(e=>!e.d),dfd=T.some(e=>e.d);let b='';
+ if(D&&T.length&&!g.take)b+='<button onclick="mv(\'take\')">Беру</button>';
+ if(D&&g.tr&&sel!=null&&!dfd&&!g.take)b+='<button onclick="mv(\'tr\',sel)">Перевести</button>';
+ if(!D&&T.length&&(!open||g.take))b+=`<button onclick="mv('pass')">${g.take?'Пас':'Бито'}</button>`;
+ if(g.ch&&T.length)b+='<button class=bad onclick="mv(\'acc\')">Уличить</button>';
+ const s=D?(g.take?'Вы берёте':sel==null?'Выберите карту, затем карту на столе':'Нажмите на карту на столе'):m==g.att&&!T.length?'Ваш ход — атакуйте':'Подкидывайте';
+ return head+pl+`<div class=mid><div class=inf>${cd(g.t)}колода: ${g.left}</div><div class=tbl>${T.map((e,k)=>`<div class=pr onclick="tp(${k})">${cd(e.a)}${e.d?cd(e.d,'dd'):''}</div>`).join('')}</div></div><div class=st>${s}</div><div class=btns>${b}</div><div class=hand>${g.hand.map((c,k)=>cd(c,k==sel?'sel':'',`onclick="pk(${k})"`)).join('')}</div>`}
+let Pv=new Set(),cur=new Set();
+const SK=[['classic','Классика',0],['retro','Ретро',300],['night','Ночь',550],['neon','Неон',800],['velvet','Бархат',1100],['gold','Золото',1800]];
+const go=p=>location.hash=='#'+p?draw():location.hash=p;
+const home=()=>{if(st&&!st.play)S.emit('leave');go('lobby')};
+const av=(i,n,u)=>u?`<img class=av src="${u}" alt="">`:`<i class=av style="background:linear-gradient(135deg,hsl(${i*30} 75% 58%),hsl(${i*30+50} 70% 40%))">${n[0].toUpperCase()}</i>`;
+const tst=m=>{const e=$('ts');e.textContent=m;e.classList.add('on');clearTimeout(tst.t);tst.t=setTimeout(()=>e.classList.remove('on'),2600)};
+const act=(t,v,x)=>S.emit('act',{t,v,...x},r=>{if(r.err)return tst(r.err);if(r.token)localStorage.t=r.token;if(r.me){me=r.me;if(t!='email')draw()}tst(r.msg||'Готово')});
+const nav=()=>`<header class=nav><span class=lg onclick="home()">${LG}<b>Дурак<span>Онлайн</span></b></span><button class=ghost onclick="home()">Главная</button><span class=sp></span><span class="ch2 gb" onclick="go('pay')"><i class=gem></i>${me.gems}<u>Пополнить</u></span><span class=ch2>${CO} ${K(me.coins)}</span><span class=me onclick="go('profile')">${av(me.av,me.name,me.ai)}<span>${me.name}<small>профиль</small></span></span></header>`;
+const profV=()=>nav()+`<div class=pf><div class=box><h2>Профиль</h2><div class=avs>${[...Array(12).keys()].map(i=>`<button class="${i==me.av?'on':''}" onclick="act('av',${i})">${av(i,me.name)}</button>`).join('')}</div>
+<div class=ups><button class=ghost onclick="$('fi').click()">Загрузить фото</button>${me.ai?`<button class=ghost onclick="act('img','')">Убрать фото</button>`:''}</div><input id=fi type=file accept="image/*" hidden onchange="up(this.files[0])"><input id=nk maxlength=16 placeholder="Новый ник"><button onclick="act('nick',$('nk').value)">Сменить ник за <i class=gem></i> 50</button><p class=mu>Ник должен быть свободен. Менять можно вне стола.</p></div>
+<div class=box><h2>Почта</h2><input id=em type=email placeholder="you@mail.com" value="${me.email||''}"><p class=mu>${me.eok?'Почта подтверждена':me.email?'Не подтверждена. Введите код из письма.':'Укажите почту для восстановления доступа.'}</p><button class=ghost onclick="act('email',$('em').value)">Отправить код</button><div class=join><input id=ec maxlength=6 placeholder="Код из письма"><button class=ghost onclick="act('ecode',$('ec').value)">Подтвердить</button></div>
+<h2>Пароль</h2><input id=po type=password placeholder="Текущий пароль"><input id=pn type=password placeholder="Новый пароль"><button class=ghost onclick="act('pass',$('pn').value,{o:$('po').value})">Сменить пароль</button></div>
+<div class=box><h2>Инвентарь и магазин</h2><div class=inv>${SK.map(([id,nm,pr])=>{const own=me.skins.includes(id),on=me.skin==id;return `<div class="it ${on?'on':''}"><div class=pv><div class="c k-${id}">Т<i>♠</i></div><div class="c r k-${id}">Д<i>♥</i></div></div><b>${nm}</b>${own?`<button class="${on?'':'ghost'}" ${on?'disabled':`onclick="act('equip','${id}')"`}>${on?'Надето':'Надеть'}</button>`:`<button onclick="buy('${id}',${pr},'${nm}')"><i class=gem></i> ${pr}</button>`}</div>`}).join('')}</div><p class=mu>Скин меняет вид ваших карт за столом.</p></div></div>`;
+const payV=()=>nav()+`<div class=box><h2>Пополнение кристаллов</h2><div class=seg>${[['card','Банковская карта'],['crypto','Криптовалюта']].map(([v,t],i)=>`<label><input type=radio name=pm value=${v}${i?'':' checked'}><span>${t}</span></label>`).join('')}</div><div class=packs>${[[100,1],[550,5],[1200,10],[3000,25]].map(([g,p],i)=>`<label class=pk><input type=radio name=pk value=${g}${i?'':' checked'}><span><b><i class=gem></i> ${g}</b>$${p}</span></label>`).join('')}</div><button onclick="pay()">Перейти к оплате</button><p class=mu>Данные карты вводятся только на защищённой странице платёжного сервиса, мы их не видим.</p></div>`;
+const pay=()=>S.emit('act',{t:'pay',v:+document.querySelector('[name=pk]:checked').value,m:document.querySelector('[name=pm]:checked').value},r=>{if(r.url)return location.href=r.url;if(r.err)return tst(r.err);me=r.me;tst(r.msg);go('lobby')});
+const LG=`<svg viewBox="0 0 44 44" aria-label="Дурак Онлайн"><g transform="rotate(-14 22 24)"><rect x="8" y="7" width="20" height="28" rx="4" fill="#fff"/><text x="18" y="27" font-size="16" text-anchor="middle" fill="#14202e" font-family="Georgia,serif">♠</text></g><g transform="rotate(12 24 24)"><rect x="17" y="9" width="20" height="28" rx="4" fill="#fff" stroke="#f4c24d" stroke-width="1.6"/><text x="27" y="29" font-size="16" text-anchor="middle" fill="#d92d3a" font-family="Georgia,serif">♥</text></g></svg>`;
+const up=f=>{if(!f)return;if(f.size>1e7)return tst('Файл слишком большой');const im=new Image();im.onload=()=>{const c=document.createElement('canvas'),m=Math.min(im.width,im.height);c.width=c.height=160;c.getContext('2d').drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,160,160);URL.revokeObjectURL(im.src);act('img',c.toDataURL('image/jpeg',.85))};im.onerror=()=>tst('Не удалось прочитать файл');im.src=URL.createObjectURL(f)};
+const shake=m=>{$('ce').textContent=m;const i=$('cod');i.classList.remove('shk');void i.offsetWidth;i.classList.add('shk')};
+const jc=()=>{const v=$('cod').value.trim();v?S.emit('join',{code:v}):shake('Введите код стола')};
+const buy=(id,p,n)=>{if(me.gems<p)return tst('Не хватает кристаллов, пополните баланс');if(confirm(`Купить «${n}» за ${p} кристаллов?`))act('buy',id)};
+const bs=(v,e)=>{const n=Math.max(100,Math.min(5000,Math.round(v/100)*100||100));if(e!='n')$('bt').value=n;const r=$('br');r.value=n;r.style.setProperty('--p',(n-100)/49+'%');
+ document.querySelectorAll('.qb button').forEach(b=>b.classList.toggle('on',b.dataset.v==n));
+ const m=+document.querySelector('[name=mx]:checked').value;$('bk').innerHTML=`Банк стола: <b>${CO} ${K(n*m)}</b>`+(n>me.coins?' <span class=er>у вас не хватает монет</span>':'');$('mkb').disabled=n>me.coins};
+let off=0;
+const tick=()=>{const b=$('bb');if(!b||!me)return;const l=Math.max(0,me.bn-(Date.now()+off)),q=Math.ceil(l/1e3),t=[q/3600|0,(q%3600)/60|0,q%60].map((v,i)=>i?String(v).padStart(2,'0'):v).join(':');
+ b.disabled=l>0;b.classList.toggle('rdy',!l);$('bm').textContent=l>0?'Следующий бонус через '+t:'Бонус готов, забирайте!';$('bp').style.width=(100-l/72000)+'%'};
+setInterval(tick,1000);
+draw();
+</script></body></html>
